@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deforestación y Reforestación</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #479e56;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-size: 50px; 
+        }
+        #gameContainer {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        #infoLeft, #infoRight {
+            width: 200px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #gameCanvas {
+            border: 1px solid #34495e;
+            margin: 0 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+        #message {
+            margin-top: 40px;
+            font-size: 50px;
+            color: #ff2209;
+            text-align: center;
+        }
+        #reforestButton {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 30px;
+            cursor: pointer;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        #reforestButton:hover {
+            background-color: #27ae60;
+        }
+        .info {
+            margin-bottom: 20px;
+        }
+        .info h3 {
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+        .info ul {
+            padding-left: 20px;
+        }
+        .info li {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Deforestación y Reforestación</h1>
+    <div id="gameContainer">
+        <div id="infoLeft">
+            <div class="info">
+                <h3>Impactos de la Deforestación</h3>
+                <ul>
+                    <li>Pérdida de biodiversidad</li>
+                    <li>Desertificación</li>
+                    <li>Alteración del ciclo del agua</li>
+                    <li>Emisión de CO2</li>
+                </ul>
+            </div>
+            <div class="info">
+                <h3>Beneficios de los Bosques</h3>
+                <ul>
+                    <li>Hogar de fauna y flora</li>
+                    <li>Regulación del clima</li>
+                    <li>Purificación del aire</li>
+                    <li>Prevención de la erosión</li>
+                </ul>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="infoRight">
+            <div class="info">
+                <h3>Cómo Puedes Ayudar</h3>
+                <ul>
+                    <li>Plantar árboles</li>
+                    <li>Usar productos de madera sostenible</li>
+                    <li>Reducir el consumo de papel</li>
+                    <li>Apoyar a organizaciones ambientales</li>
+                </ul>
+            </div>
+            <div class="info">
+                <h3>Datos Curiosos</h3>
+                <ul>
+                    <li>Un solo árbol puede absorber hasta 48 libras de CO2 por año.</li>
+                    <li>Los bosques cubren aproximadamente el 31% de la superficie terrestre del mundo.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="message">Haga click en los árboles para deforestar</div>
+    <button id="reforestButton" onclick="startReforesting()">Reforestar</button>
+    <script src="game.js"></script>
+</body>
+</html>
